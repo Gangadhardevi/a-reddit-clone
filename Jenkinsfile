@@ -1,8 +1,10 @@
 pipeline {
     agent any
-    tools {
+	stages {
+            tools {
         jdk 'jdk17'
         nodejs 'node16'
+      }
     }
 }
     environment {
