@@ -4,6 +4,7 @@ pipeline {
         jdk 'jdk17'
         nodejs 'node16'
     }
+}
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
         APP_NAME = "reddit-clone-pipeline"
@@ -20,6 +21,7 @@ pipeline {
                 cleanWs()
             }
         }
+    }
         stage('Checkout from Git') {
             steps {
                 git branch: 'main', url: 'https://github.com/Gangadhardevi/a-reddit-clone.git'
